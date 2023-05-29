@@ -11,8 +11,19 @@
             color: black;
         }
     </style>
+    <script>
+        // XSS alert function
+        function showAlert() {
+            alert("Hacker Detected!! :)");
+        }
+    </script>
 </head>
 <body>
     <center><h1>Thanks For Visiting :) </h1></center>
+
+    <!-- Trigger the XSS alert -->
+    <script>
+        showAlert();
+    </script>
 </body>
 </html>

@@ -10,40 +10,18 @@
             background-color: gray;
             color: black;
         }
-
-        #alert {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: white;
-            border: 1px solid black;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
-        }
-
-        #alert.show {
-            display: block;
-        }
     </style>
+    <script>
+        // Function to show the alert popup
+        function showAlert() {
+            alert("Hacker Detected! :)");
+        }
+    </script>
 </head>
 <body>
     <center><h1>Thanks For Visiting :) </h1></center>
 
-    <!-- Alert message -->
-    <div id="alert" class="show">
-        <h2>Hacker Detected! :)</h2>
-    </div>
-
-    <!-- Trigger the alert -->
-    <script>
-        // Show the alert immediately
-        window.addEventListener('DOMContentLoaded', function() {
-            var alertElement = document.getElementById('alert');
-            alertElement.classList.add('show');
-        });
-    </script>
+    <!-- Trigger the alert on link click -->
+    <a href="#" onclick="showAlert()">br0k3nsec.github.io</a>
 </body>
 </html>

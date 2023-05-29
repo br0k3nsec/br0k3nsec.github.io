@@ -6,24 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>br0k3nsec</title>
     <style>
-        *{
+        * {
             background-color: gray;
             color: black;
         }
-    </style>
-    <script>
-        // XSS alert function
-        function showAlert() {
-            alert("Hacker Detected!! :)");
+
+        #alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
         }
-    </script>
+
+        #alert.show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <center><h1>Thanks For Visiting :) </h1></center>
 
-    <!-- Trigger the XSS alert -->
+    <!-- Alert message -->
+    <div id="alert">
+        <h2>Hacker Detected! :)</h2>
+    </div>
+
+    <!-- Trigger the alert -->
     <script>
-        showAlert();
+        // Show the alert after 2 seconds
+        setTimeout(function() {
+            var alertElement = document.getElementById('alert');
+            alertElement.classList.add('show');
+        }, 2000);
     </script>
 </body>
 </html>
